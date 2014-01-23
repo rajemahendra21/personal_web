@@ -1,0 +1,245 @@
+@charset "utf-8";
+/* CSS Document */
+@import url("reset.css");
+/* ===== Primary Styles ========================================================
+   Author: RedRain @ 2013
+   ========================================================================== */
+@font-face {
+    font-family: 'gotham-Bold';
+    src: url('http://redrain.tw/font/GOTHMBOL.TTF');
+}
+@font-face {
+    font-family: 'gotham-Light';
+    src: url('http://redrain.tw/font/GOTHMLIG.TTF');
+}
+html{ -webkit-text-size-adjust:none;}
+body,html{ position:relative; width:100%; height:100%; background:#fff; font-family:Arial, Verdana, sans-serif; overflow-y:hidden;}
+::selection { background:rgba(255,0,6,0.5); color:#fff;}
+::-moz-selection{ background:rgba(255,0,6,0.5); color:#fff;}
+/*------jpreloader-------------------------------------*/
+#preLoadBox{ position:fixed; top:0; left:0; display:block; z-index:9999; border-style:solid; border-color:rgba(255,255,255,1) rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,0);}
+#preLoadBox2{ position:fixed; right:0; bottom:0; display:block; z-index:9999; border-style:solid; border-color:rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,1) rgba(255,255,255,0);}
+/*#preLoadBox3{ position:fixed; top:45%; left:50%; margin:-25px 0 0 -25px; z-index:10000; display:block; width:50px; height:50px; background:url(../images/loading2.gif) no-repeat;}
+*/#preLoadBox3{ position:fixed; top:50%; left:50%; margin:-40px 0 0 -40px; z-index:10000; display:block; width:80px; height:80px; background:url(../images/loading.gif) no-repeat;}
+/*#jprePercentage { position:fixed !important; top:45%; width:100%; margin:25px 0 0 0; font-size:10px; color:#999; font-family:Arial,Helvetica,sans-serif; font-weight:normal; letter-spacing:1px; text-align:center;}
+*/#jprePercentage { position:fixed !important; top:-50%; /*;top:50%;*/width:100%; margin:50px 0 0 0; font-size:10px; color:#000; /*color:#fff;*/ font-family:Arial,Helvetica,sans-serif; font-weight:normal; letter-spacing:1px; text-align:center;}
+/*====================================BODY====================================*/
+.BODY { position:relative; display:block; width:100%; height:100%; overflow:hidden; opacity:0;}
+.LOGO { position:fixed; top:15px; left:15px; z-index:999; display:block; width:80px; height:80px; background:url(../images/redrain.png) no-repeat;}
+/*------MENU-------------------------------------*/
+/*
+.MENU { position:absolute; right:60px; top:11px;}
+.MENU li { float:left; margin-left:15px;}
+.MENU li a { font-size:14px; color:#fff; text-decoration:none; letter-spacing:1px; line-height:30px;}
+.MENU li:last-child { border-right:1px solid rgba(255,255,255,0.4); padding-right:35px;}
+*/
+.MENU { position:absolute; right:50px; top:11px; }
+.MENU li { float:left; margin-left:15px;}
+.MENU li a { font-size:14px; color:#fff; text-decoration:none; letter-spacing:0px; line-height:30px; text-transform:uppercase; font-weight:bold;/* text-shadow:1px 1px 0px #666;*/}
+.MENU li:last-child { border-right:1px solid rgba(255,255,255,0.4); padding-right:20px;}
+/*------INDEX_BANNER-------------------------------------*/
+.INDEX_BANNER { position:fixed; top:0; width:100%; height:100%;
+-moz-transition: all 0.5s ease-out;
+-webkit-transition: all 0.5s ease-out;
+-o-transition: all 0.5s ease-out;
+-ms-transition: all 0.5s ease-out;}
+.ad { position:absolute; z-index:0; display:block; width:100%; height:100%; overflow:hidden; background:#fff;}
+.INDEX_BANNER img { display:block; position:absolute;}
+.L_BTM { position:absolute; top:0; left:0; z-index:9; width:50%; height:100%; background:url(../images/arrows_l.png)  1% center no-repeat; cursor:pointer;/* cursor:url(../images/arrows_l2.png), pointer;*/}
+.R_BTM { position:absolute; top:0; right:0; z-index:9; width:50%; height:100%; background:url(../images/arrows_r.png) 99% center no-repeat; cursor:pointer;/* cursor:url(../images/arrows_r2.png), pointer;*/}
+.NONE { position:absolute; z-index:8; display:block; width:100%; height:100%;}
+.QR_BOX { position:fixed; top:-100%; z-index:1000; display:block; width:100%; height:0; background:#FFF;}
+.BOX_BLUR { 
+-moz-filter:blur(10px); 
+-webkit-filter:blur(10px); 
+-o-filter:blur(10px); 
+-ms-filter:blur(10px); 
+
+-moz-transition: all 1.5s ease-out;
+-webkit-transition: all 1.5s ease-out;
+-o-transition: all 1.5s ease-out;
+-ms-transition: all 1.5s ease-out;}
+.QR_BOX img { position:absolute; top:50%; left:50%; margin:-168px 0 0 -168px;}
+/*------WORKS_LIST_BOX-------------------------------------*/
+.WORKS_LIST_BOX { position:absolute; z-index:9999; top:100%; margin-top:-50px; display:block; width:100%; height:100%; background:rgba(9,9,9,0.9) url(../images/bg2.png) repeat;}
+.WEB_LIST { clear:both; display:block; width:100%; height:auto%; margin:0 auto;}
+.WEB_LIST ul { padding:0 15px;}
+.WEB_LIST li { float:left; display:block; width:200px; height:134px; background:rgba(0,0,0,1); margin:15px; overflow:hidden; border:1px #252525 solid;}
+.WEB_LIST li a { position:relative !important; display:block !important; width:100%; height:100%; opacity:1 !important; overflow:hidden !important; cursor:url(http://redrain.tw/images/go_btn.png), pointer;}
+.WEB_LIST li.BANNER a { cursor:url(http://redrain.tw/images/go_btn_3.png), pointer;}
+.WEB_LIST li a img { top:50%;}
+.WEB_LIST_TAB { z-index:9999; width:100%; height:30px; padding:30px 15px 20px 15px; margin-top:50px; border-top:1px rgba(255,255,255,0.2) solid;}
+.WEB_LIST_TAB li { float:left; margin:0 15px 15px 15px;}
+.WEB_LIST_TAB li a { font-family:Arial, sans-serif; color: #fff; font-size: 16px; font-weight:bold; text-decoration:none;}
+.WORKS_TXT { position:absolute; z-index:100; display:block; width:100%; height:100%; border:0px #fff solid;}
+
+.ON { border:1px rgba(255,255,255,1) solid !important;}
+.ON a img.IMG_N { display:none !important;}
+.ON a img.IMG_HOVER { display:block !important;}
+.ON a .WORKS_TXT { display:none !important;}
+
+.FONT01 {  display:block; position:absolute; top:85%; margin-top:-9px; width:100%; height:18px; z-index:-1;font-size:15px; line-height:18px; color:#fff; letter-spacing:3px; text-align:center;
+text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.25);
+-webkit-text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.25);
+-moz-box-text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.25);}
+
+#MIX .mix a img { position:absolute; z-index:99; display:block; width:auto; height:auto;}
+#MIX .mix a img.IMG_HOVER { position:absolute; z-index:98; display:block; width:auto; height:auto;}
+#MIX .mix a { display:none; opacity:0;}
+#MIX .mix { display:none; opacity:0;}
+
+.CLOSE_BTN { position:absolute; top:0px; right:0px; display:block; width:50px; height:50px; background:url(../images/close_btn.png) center center no-repeat; cursor:pointer;}
+.OPEN_BTN { position:absolute; top:0px; right:0px; display:none; width:50px; height:50px; background:url(../images/open_btn.png) center center no-repeat; cursor:pointer;}
+/*------mCustomScrollBox-------------------------------------*/
+#content_1 { position:relative; width:100%; height:72%; overflow:auto;}
+#content_1 .mCSB_container { margin-right:0% !important;}
+#content_1 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ width:3px; background:#d60d1a !important; background:rgba(223,0,0,0.5) !important; filter:"alpha(opacity=100)"; -ms-filter:"alpha(opacity=100)";}
+#content_1 .mCSB_scrollTools .mCSB_draggerRail{	width:1px; background:#fff !important; background:rgba(255,255,255,0) !important; filter:"alpha(opacity=0)"; -ms-filter:"alpha(opacity=0)";}
+
+#content_2 { position:relative; width:100%; height:72%; overflow:auto;}
+#content_2 .mCSB_container { margin-right:0% !important;}
+#content_2 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ width:3px; background:#d60d1a !important; background:rgba(223,0,0,0.5) !important; filter:"alpha(opacity=100)"; -ms-filter:"alpha(opacity=100)";}
+#content_2 .mCSB_scrollTools .mCSB_draggerRail{	width:1px; background:#fff !important; background:rgba(255,255,255,0) !important; filter:"alpha(opacity=0)"; -ms-filter:"alpha(opacity=0)";}
+/*------OTHER-------------------------------------*/
+.BOX_1 { position:fixed; z-index:8; bottom:-8%; right:2%; display:block; width:483px; height:484px; background:url(../images/box_1.png) no-repeat;}
+.BOX_2 { position:fixed; z-index:8; bottom:16%; left:10%; display:block; width:243px; height:243px; background:url(../images/box_2.png) no-repeat;}
+.BOX_3 { position:fixed; z-index:8; bottom:50%; left:4%; display:block; width:167px; height:167px; background:url(../images/box_3.png) no-repeat;}
+
+
+.TXTBOX { position:fixed; z-index:999; bottom:20%; left:6%;}
+.TXTBOX p { position:relative;}
+.TXTBOX span { position:absolute; left:60px; font-family:Arial, Verdana, sans-serif; color:#464646; font-size:12px;}
+
+.TXTBOX a { position:absolute; left:60px; font-family:Arial, Verdana, sans-serif; color:#464646; font-size:12px; cursor:url(http://redrain.tw/images/go_btn_3.png), pointer; white-space: nowrap;}
+.TXTBOX a:hover { color:#fff;}
+.P-TITLE { font-family:"メイリオ", "ＭＳ Ｐゴシック", Arial, Verdana, sans-serif; color:#464646; font-size:25px; font-weight:600; margin-bottom:5px; cursor:default;}
+.P-NAME { font-family:"メイリオ", "ＭＳ Ｐゴシック", Arial, Verdana, sans-serif; color:#464646; font-size:18px; font-weight:400; margin-bottom:18px; cursor:default;}
+.P-DATA { font-family:Arial, Verdana, sans-serif; color:#464646; font-size:12px; font-weight:normal; margin-bottom:5px; letter-spacing:1px; cursor:default;}
+.P-SKILL { font-family:Arial, Verdana, sans-serif; color:#464646; font-size:12px; font-weight:normal; margin-bottom:5px; letter-spacing:1px; cursor:default;}
+.P-LINK { font-family:Arial, Verdana, sans-serif; color:#464646; font-size:12px; font-weight:normal; margin-bottom:0px; letter-spacing:2px; cursor:default;}
+
+#theCanvas{	position:absolute; left:0; top:0; z-index:998; overflow:hidden;/* -webkit-filter:blur(3px);*/ 
+-moz-transition: all 0.5s ease-out;
+-webkit-transition: all 0.5s ease-out;
+-o-transition: all 0.5s ease-out;
+-ms-transition: all 0.5s ease-out;}
+
+.M_W .OPEN_BTN_2 { position:absolute; top:0px; left:0; display:none; width:50px; height:50px; color:#fff; background:url(../images/open_btn2.png) center center no-repeat; cursor:pointer;}
+.M_W .WEB_LIST_TAB {  position:absolute; left:-220px; z-index: 9999 !important; width:190px; height:100%; margin-top:0px !important; padding:15px; border-top: 0px #434343 solid !important; background:rgba(51,51,51,1);}
+
+.M_W .WEB_LIST_TAB li { float: none !important; height: 50px !important; margin: 0 !important; border-bottom: 1px solid #414141 !important; line-height: 50px !important;}
+
+.M_W .WEB_LIST_TAB li a { display:block !important; width:190px !important; height:100% !important;}
+
+.M_W .WEB_LIST_TAB li:last-child { clear:both; border-bottom: 0px solid #414141 !important; margin-bottom:50px !important;}
+.M_W #content_1 { margin-top:50px; padding-top:15px; border-top:1px rgba(76,76,76,1) solid;}
+
+.M_T { position:fixed; left: 0% !important; bottom: 50px !important; z-index: 999 !important; padding:20px 15px 30px 15px !important; width:100% !important; height:90px; 
+background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 1%, rgba(0,0,0,0.45) 100%);
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,1)), color-stop(1%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0.45)));
+background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 1%,rgba(0,0,0,0.45) 100%);
+background: -o-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 1%,rgba(0,0,0,0.45) 100%);
+background: -ms-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 1%,rgba(0,0,0,0.45) 100%);
+background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 1%,rgba(0,0,0,0.45) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#73000000',GradientType=1 );}
+
+.OPEN_BTN_3 { position:absolute; bottom:0px; left:0; z-index:99999; display:none; width:50px; height:50px; color:#fff; background:url(../images/open_btn3.png) center center no-repeat; cursor:pointer;}
+
+.M_T a { color:#fff !important;}
+.M_T span { color:#fff; font-size:12px;}
+.M_T .P-TITLE { color:#fff; font-size:20px; font-weight:600;}
+.M_T .P-NAME { color:#fff; font-size:15px; font-weight:400;}
+.M_T .P-DATA { color:#fff; font-size:12px; font-weight:normal;}
+.M_T .P-SKILL { color:#fff; font-size:12px; font-weight:normal;}
+.M_T .P-LINK { color:#fff; font-size:12px; font-weight:normal;}
+
+.M_SCROLL { display:block; width:100%; height:100%; overflow-y:scroll;}
+
+.control { position:absolute; left:50%; bottom:55px; z-index:9998; width:auto; height:15px; text-align:center;}
+.control a { display:inline-block; margin:0 10px; width:10px; height:10px; background:url(../images/buttons.png) -10px 0 no-repeat;	line-height:9999px;	text-decoration:none; overflow:hidden;}
+.control a.on {	background:url(../images/buttons.png) 0 0 no-repeat;}
+
+.ad_length_box { position:absolute; bottom:15px; z-index:999; width:100%; height:15px; text-align:center;}
+.FONT00 { color:#fff; font-size:11px; font-weight:normal;}
+.ad_length { color:#fff; font-size:11px; font-weight:normal;}
+/*====================================CONTACT====================================*/
+.CONTACT_BOX { position:fixed; z-index:9999; display:none; width:100%; height:100%;}
+/*====================================INDEX====================================*/
+.INDEX_BODY { position:fixed !important; z-index:999; width:100%; height:100% !important; overflow:hidden; background:url(../images/bg.png) repeat #000;}
+.INDEX_BODY .mCustomScrollBox > .mCSB_scrollTools { width:30px !important; right:-14px !important; z-index:999999;}
+.INDEX_BODY .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { width:4px !important;}
+.INDEX_BODY .mCSB_scrollTools .mCSB_draggerRail { width:4px !important;}
+.info { display:none;}
+.INDEX_BODY .ad_length_box { display:none;}
+.ALL { height:5500px;}
+
+.DOWN_BTN { position:fixed; bottom:10%; left:50%; margin-left:-42px; z-index:99999;}
+.DOWN_BTN img { position:relative;}
+.DOWN_BTN_2 { display:none; position:fixed; bottom:70px; left:50%; margin-left:-42px; z-index:99999;}
+.ABOUT_BOX_HEXAGON_1 { display:none; position:fixed; z-index:1; top:50%; left:50%; width:874px; height:842px; margin:-421px 0 0 -437px; background:url(../images/hexagon_1.png) no-repeat center center;}
+.ABOUT_BOX_HEXAGON_2 { display:none; position:fixed; z-index:2; top:50%; left:50%; width:874px; height:842px; margin:-421px 0 0 -437px; background:url(../images/hexagon_2.png) no-repeat center center;}
+
+.ABOUT_BOX { display:none; position:fixed; z-index:6; top:50%; left:50%; width:626px; height:396px; margin:-198px 0 0 -313px;}
+.ABOUT_BOX h3 { font-family:gotham-Light , Arial, Verdana, sans-serif; color:#202020; text-shadow:rgba(255, 255, 255, 1) 1px 1px 1px; text-transform:uppercase; letter-spacing:20px; font-size:30px; font-weight:normal; text-align:center;}
+.ABOUT_BOX p { font-family:gotham-Light , Arial, Verdana, sans-serif; color:#202020; text-shadow:rgba(255, 255, 255, 1) 1px 1px 1px; letter-spacing:1px; font-size:15px; line-height:21px; text-align:center;}
+.ABOUT_BOX a { font-family:gotham-Light , Arial, Verdana, sans-serif; color:#202020; text-shadow:rgba(255, 255, 255, 1) 1px 1px 1px; letter-spacing:1px; font-size:15px; line-height:21px; text-align:center; border-bottom:1px solid rgba(32, 32, 32, 0.32); text-decoration:none;  cursor:url(http://redrain.tw/images/go_btn_2.png), pointer;}
+.ABOUT_BOX_BACK_BTN { text-align:center; cursor:pointer !important;}
+
+.DOWN_BTN img{
+  -webkit-animation-name: moveThis;
+  -webkit-animation-duration:0.8s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+}
+@-webkit-keyframes moveThis {
+  0% {top:0;}
+  50% {top:8px;}
+  100% {top:0;}
+}
+
+.ABOUT_BOX_HEXAGON_1 {
+  -webkit-animation-name: rotateThis1;
+  -webkit-animation-duration:60s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+}
+@-webkit-keyframes rotateThis1 {
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
+.ABOUT_BOX_HEXAGON_2 {
+  -webkit-animation-name: rotateThis2;
+  -webkit-animation-duration:60s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+}
+@-webkit-keyframes rotateThis2 {
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(-360deg);}
+}
+
+.INDEX_TITLE { position:fixed; bottom:10%; z-index:999; height:70px; width:100%; overflow:hidden;}
+.INDEX_TITLE a { color:#fff; text-decoration:none; font-family:gotham-Bold , Arial, Verdana, sans-serif; text-shadow:rgba(0, 0, 0, 0.3) 1px 1px 1px; text-transform:uppercase; letter-spacing:-2px; font-size:60px; cursor:url(http://redrain.tw/images/go_btn.png), pointer;}
+
+@media screen and (min-width: 480px) and (max-width: 930px) {
+	.INDEX_TITLE { position:fixed; bottom:12%; z-index:999; height:40px; width:100%; overflow:hidden;}
+	.INDEX_TITLE a { color:#fff; text-decoration:none; font-family:gotham-Bold , Arial, Verdana, sans-serif; text-shadow:rgba(0, 0, 0, 0.3) 1px 1px 1px; text-transform:uppercase; letter-spacing:0px; font-size:30px; cursor:url(http://redrain.tw/images/go_btn.png), pointer;}
+}
+@media (max-width:645px) {
+	.INDEX_TITLE { position:fixed; bottom:12%; z-index:999; height:30px; width:100%; overflow:hidden;}
+	.INDEX_TITLE a { color:#fff; text-decoration:none; font-family:gotham-Bold , Arial, Verdana, sans-serif; text-shadow:rgba(0, 0, 0, 0.3) 1px 1px 1px; text-transform:uppercase; letter-spacing:0px; font-size:18px; cursor:url(http://redrain.tw/images/go_btn.png), pointer;}
+	.CONTACT_BOX .ABOUT_BOX{ top:30px; height:65%; padding-bottom:50px; overflow-y:scroll;}
+	.ABOUT_BOX { display:none; position:absolute; z-index:3; top:2915px; left:50%; width:480px; height:220px; margin:0 0 0 -240px;}
+	.ABOUT_BOX h3 { font-family:gotham-Light , Arial, Verdana, sans-serif; color:#202020; text-shadow:rgba(255, 255, 255, 1) 1px 1px 1px; text-transform:uppercase; letter-spacing:15px; font-size:25px; font-weight:normal; text-align:center;}
+	.ABOUT_BOX p { font-family:gotham-Light , Arial, Verdana, sans-serif; color:#202020; text-shadow:rgba(255, 255, 255, 1) 1px 1px 1px; letter-spacing:0px; font-size:15px; line-height:21px; text-align:center;}
+	.ABOUT_BOX a { font-family:gotham-Light , Arial, Verdana, sans-serif; color:#202020; text-shadow:rgba(255, 255, 255, 1) 1px 1px 1px; letter-spacing:0px; font-size:15px; line-height:21px; text-align:center; border-bottom:1px solid rgba(32, 32, 32, 0.32); text-decoration:none;  cursor:url(http://redrain.tw/images/go_btn_2.png), pointer;}
+}
+
+@media (max-width:480px) {
+	.CONTACT_BOX .ABOUT_BOX{ top:30px; height:65%; padding-bottom:50px; overflow-y:scroll;}
+	.ABOUT_BOX { display:none; position:absolute; z-index:3; top:2915px; left:50%; width:310px; height:220px; margin:0 0 0 -155px;}
+	.ABOUT_BOX h3 { font-family:gotham-Light , Arial, Verdana, sans-serif; color:#202020; text-shadow:rgba(255, 255, 255, 1) 1px 1px 1px; text-transform:uppercase; letter-spacing:10px; font-size:20px; font-weight:normal; text-align:center;}
+	.ABOUT_BOX p { font-family:gotham-Light , Arial, Verdana, sans-serif; color:#202020; text-shadow:rgba(255, 255, 255, 1) 1px 1px 1px; letter-spacing:0px; font-size:13px; line-height:21px; text-align:center;}
+	.ABOUT_BOX a { font-family:gotham-Light , Arial, Verdana, sans-serif; color:#202020; text-shadow:rgba(255, 255, 255, 1) 1px 1px 1px; letter-spacing:0px; font-size:13px; line-height:21px; text-align:center; border-bottom:1px solid rgba(32, 32, 32, 0.32); text-decoration:none;  cursor:url(http://redrain.tw/images/go_btn_2.png), pointer;}
+}
+
